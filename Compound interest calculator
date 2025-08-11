@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class compoundInterest {
+
+    public static void main(String[] args){
+
+        Scanner scanner = new Scanner(System.in);
+
+        double principle;
+        double rateOfInterest;
+        double amount;
+        double timesCompound;
+        double year;
+
+        System.out.print("Enter principle amount: ");
+        principle = scanner.nextDouble();
+
+        System.out.print("Enter rate of interest: ");
+        rateOfInterest = scanner.nextDouble()/100;
+
+        System.out.print("Number of times per year: ");
+        timesCompound = scanner .nextDouble();
+
+        System.out.print("Enter number of years: ");
+        year = scanner.nextDouble();
+
+
+        amount = principle * Math.pow(1 + rateOfInterest/timesCompound , year*timesCompound);
+
+        System.out.println("The Final Amount Is " + amount);
+
+        scanner.close();
+
+    }
+
+}
